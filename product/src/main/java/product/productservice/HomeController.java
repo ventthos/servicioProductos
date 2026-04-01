@@ -9,6 +9,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 public class HomeController {
     @GetMapping("/hello-world")
@@ -34,7 +37,7 @@ public class HomeController {
 
         products.add(product1);
         products.add(product2);
-
+        log.info(" se han obtenido todos los productos");
         return products;
     }
 
